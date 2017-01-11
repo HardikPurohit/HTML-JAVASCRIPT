@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>RNA Trancription</title>
+		<script>
+			function convert()
+			{
+				document.getElementById("result").innerHTML="";
+				var str=document.getElementById("dna").value;
+				var pat=/^[GCTA]+$/;
+				if(str!="")
+				{
+					if(pat.test(str))
+					{
+						var re="";
+						var arr=str.split("");
+						var i;
+						for(i=0;i<arr.length;i++)
+						{
+							switch(arr[i])
+							{
+								case 'G':
+									re+="C";
+									break;
+								case 'C':
+									re+="G";
+									break;
+								case 'T':
+									re+="A";
+									break;
+								case 'A':
+									re+="U";
+									break;
+							}
+						}
+						document.getElementById("result").innerHTML=re;
+					}
+					else
+					{
+						alert("Invalid input");
+					}
+				}
+				else
+				{
+					alert("Please enter Dna first!!");
+				}
+				document.getElementById("dan").focus();
+			}
+		</script>
+	</head>
+	<body>
+		Enter DNA <input type="text" name="txtDna" id="dna"><br />
+		<input type="button" name="btn" value="Convert" onclick="convert()">
+		<div id="result">
+		</div>
+	</body>
+</html>

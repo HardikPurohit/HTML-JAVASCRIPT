@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Fibonnaci</title>
+		<script>	
+			var i;
+			function fibo()
+			{
+				var no;
+				no=document.getElementById("no").value;
+				if(no=="")
+				{
+					alert("Please enter no");
+				}
+				else
+				{
+					if(isNaN(no))
+					{
+						alert("Please enter only nonber");
+					}
+					else
+					{
+						var h=0;
+						for(i=0;i<no;i++)
+						{
+							h=fibo_series(i);
+							if(h<=no)
+							{
+								document.writeln(h);
+							}
+							else
+							{
+								break;
+							}
+						}
+					}
+				}
+				document.getElementById("no").focus();
+			}
+			function fibo_series(n)
+			{	
+				if(n<2)
+				{
+					return n;
+				}
+				else
+				{
+					return fibo_series(n-1) + fibo_series(n-2);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		Enter No : <input type="text" name="txtNo" id="no"><br />
+		<input type="button" name="btn" value="Get Fobinaaci" onclick="fibo()">
+
+	</body>	
+</html>

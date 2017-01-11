@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Leap year</title>
+		<script>
+			function validate_leap()
+			{
+				var year=document.getElementById("year").value;
+				if(year=="")
+				{
+					alert("Please enter year");
+				}
+				else
+				{
+					if(isNaN(year))
+					{
+						alert("Please enter only nunber");
+					}
+					else
+					{
+						if((year%4==0 || year%400==0) && year%100!=0)
+						{
+							alert("It is leap year");
+							document.getElementById("year").value="";
+						}
+						else
+						{
+							alert("Not a leap year");
+						}
+					}
+				}
+				document.getElementById("year").focus();
+			}
+		</script>
+	</head>
+	<body>
+		Enter year : <input type="text" name="txtYear" id="year"><br />
+		<input type="button" name="btn" value="Validate" onclick="validate_leap()">
+	</body>
+</html>

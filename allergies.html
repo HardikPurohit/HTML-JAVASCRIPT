@@ -1,0 +1,37 @@
+<html>
+ <head>
+     <script>
+		function check()
+		{
+			var str=document.getElementById('txt').value;
+			var fruits = new Array( "eggs", "peanuts", "shellfish","strawberries","tomatoes","chocolate","pollen","cats");
+			var  value= new Array(1,2,4,8,16,32,64,128);
+			var i=fruits.length-1;
+			var str1=new String("");
+			while(str>0)
+			{
+				if(str>=value[i])
+				{
+					str-=value[i];
+					str1+=" "+fruits[i];
+				}
+				i--;
+			}
+			var str2=str1.split(" ");
+			str1="";
+			for(var j=str2.length-1;j>=0;j--)
+			{
+				str1+=" "+str2[j];
+			}
+			document.getElementById("result").innerHTML=str1;
+		}
+	</script>
+  </head>
+ <body>
+  <lable>Enter String :</lable><input type="text" id="txt"/>
+  <input type="button" onclick="check()" value="convert to RNA"/>
+  <div id="result">
+  </div>
+ </body>
+ 
+</html>

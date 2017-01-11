@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bill</title>
+		<script type="text/javascript" src="bill.js" ></script>
+		 <link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+			<div class="main">
+				<header>Bill</header>
+				<div class="details">
+					Enter Name    : <input type="text" name="txtName" id="nm"><br />
+					Enter Address :<textarea id="addr"></textarea><br />
+					Enter Meter No. : <input type="text" name="txtMeter" id="meter"><br />
+					Tarrif : <select name="selTerrif" id="tarrif" onchange="ter()">
+									<option name="sel" value="sel_ta">Select Tarrif</option>
+									<option name="RGP" value="RGP">RGP</option>
+									<option name="BPL" value="BPL">BPL</option>
+									<option name="GLP" value="GLP">GLP</option>
+									<option name="NRGP" value="NRGP">Non-Redential</option>
+									<option name="LTP" value="LTP">Agriculture</option>
+ 								</select><br/>
+					Category : <select name="selCategory" id="cat" >
+									<option name="sel" value="sel_cat">Select Category</option>
+									<option name="residential" value="Residential">Residential</option>
+									<option name="com" value="Commercial">Commercial</option>
+									<option name="industry" value="Industrial">Industrial</option>
+									<option name="religious" value="Religious">Religious</option>
+									<option name="hostel" value="Hostel">Hostel</option>
+ 								</select><br/>
+					Supply Type : <input type="radio" name="supply_type"  id="one_phase" checked>1 Phase &nbsp;&nbsp;&nbsp; <input type="radio" name="supply_type" id="three_phase">3 Phase<br />
+					Consumed units: <input type="text" name="txtUnit" id="unit"><br />
+					<input type="button" name="btn" id="cal" value="Make Bill" onclick="cal_bill()">
+				</div>
+			</div>
+			<center>
+			<table id="print" class="print">
+				<tr>
+					<th colspan=2>
+						Print Electricity Bill
+					</th>
+				</tr>
+				<tr>
+					<td>Name</td>
+					<td id="disp_nm"></td>
+				</tr>
+				<tr>
+					<td>Address</td>
+					<td id="disp_add"></td>
+				
+				</tr>
+				<tr>
+					<td>Meter No: </td>
+					<td id="disp_meter"></td>
+				</tr>
+				<tr>
+					<td>Tarrif</td>
+					<td id="disp_tar"></td>
+				</tr>
+				<tr>
+					<td>Category</td>
+					<td id="disp_cat"></td>
+				</tr>
+				<tr>
+					<td>supply type</td>
+					<td id="disp_supply"></td>
+				</tr>
+				<tr>
+					<td>Consumed Units</td>
+					<td id="disp_unit"></td>
+				</tr>
+				<tr>
+					<td>Regulatory charge</td>
+					<td id="disp_regu"></td>
+				</tr>
+				<tr>
+					<td>FPPPA Rate</td>
+					<td id="disp_fpppa"></td>
+				</tr>
+				<tr>
+					<th>Total Bill</th>
+					<th id="disp_tot"></th>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+			</table>
+			</center>
+	</body>
+</html>

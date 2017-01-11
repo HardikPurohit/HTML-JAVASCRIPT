@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Conversion</title>
+		<script>
+			function cel()
+			{
+				var cels=document.getElementById("cels").value;
+				
+				if(cels=="")
+				{
+					alert("Please enter cels or Faren");
+				}
+				else
+				{
+					if(isNaN(cels))
+					{
+						alert("Please enter only nunber");
+					}	
+					else
+					{
+						var con=cels*(9/5)+32;
+						document.getElementById("faren").value=con;
+					}	
+					
+				}
+				document.getElementById("cels").focus();
+			}
+			function far()
+			{
+				var faren=document.getElementById("faren").value;
+				if(faren=="")
+				{
+					alert("Please enter cels or Faren");
+				}
+				else
+				{
+					if(isNaN(faren))
+					{
+						alert("Please enter only nunber");
+					}	
+					else
+					{
+						con=(faren-32)/9*5;
+						document.getElementById("cels").value=con;	
+					}	
+					
+				}
+				document.getElementById("faren").focus();
+			}
+		</script>
+	</head>
+	<body>
+		Enter Celsuius : <input type="text" name="txtCels" id="cels">
+		<input type="button" name="btn" value="convert to farenhir" onclick="cel()"><br/><br />
+		Enter Farenheif : <input type="text" name="txtFare" id="faren">
+		<input type="button" name="btn" value="convert to celsius" onclick="far()">
+	</body>	
+</html>

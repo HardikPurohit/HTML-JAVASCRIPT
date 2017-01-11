@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>January</title>
+
+	</head>
+	<body>
+		Enter year : <input type="text" name="txtYear" id="year"><br />
+		<input type="button" name="btn" value="Validate" onclick="validate_jan()">
+		<script>
+			function validate_jan()
+			{
+				var year=document.getElementById("year").value;
+				if(year=="")
+				{
+					alert("Please enter year");
+				}
+				else
+				{
+					if(isNaN(year))
+					{
+						alert("Please enter only nunber");
+					}
+					else
+					{
+						if(year >= 2017 && year <= 2050)
+						{
+							var dt=new Date("January 1, "+year); 
+							if(dt.getDay()==0)
+							{
+								alert("Its sunday");
+								document.getElementById("year").value="";
+							}
+							else
+							{
+								alert("Its not sunday");
+							}	
+						}
+						else
+						{
+							alert("Please enter year between 2017 to 2050");
+						}
+					}	
+				}
+				document.getElementById("year").focus();
+			}
+		</script>
+	</body>	
+</html>

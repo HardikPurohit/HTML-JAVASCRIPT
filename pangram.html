@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>pangram</title>
+		<script>
+		function check()
+		{
+			var regex = /([a-z])(?!.*\1)/g;
+			var str=document.getElementById('str').value.toLowerCase();
+			if(str=="")
+			{
+				alert("Enter String first!!");
+			}
+			else
+			{
+				if(str.match(regex).length == 26)
+				{
+					alert("pangram");
+				}
+				else
+				{
+					alert("Not Pangram");
+				}
+				document.getElementById('str').focus();
+			}
+		}
+		</script>
+	</head>
+	<body>
+		Enter String <input type="text" name="txtStr" id="str"><br />
+		<input type="button" name="btn" value="Check" onclick="check()">
+	</body>
+</html>

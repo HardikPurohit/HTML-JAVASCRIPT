@@ -1,0 +1,111 @@
+root 
+{ 
+    display: block;
+}
+*,*:after,*:before
+{
+    box-sizing: border-box;
+}
+
+body
+{
+    margin: 0;
+    padding: 0;
+	background-color:#f5f5dc;
+}
+.main
+{
+	margin-left: 25%;
+    margin-top: 8%;
+    background-color:white;
+    width:50%;
+    height: 40%;
+    border-radius: 7px;
+    box-shadow: 5px 5px 5px #e0dfdf; 
+}
+header
+{
+	width:100%;
+	background-color:#deb887;
+/*	background-color: #53bd86;*/
+	color:white;
+	text-align:center;
+	font-size:250%;
+}
+.details
+{
+	margin-left:30%;
+	padding:5px;
+}
+#nm
+{
+	margin-left:6.5%;
+	margin-bottom:3.5px;
+}
+#addr
+{
+	margin-left:4.5%;
+	margin-bottom:3.5px;
+	width:40%;
+	resize: none;
+}
+#meter
+{
+	margin-left:1%;
+	margin-bottom:3.5px;
+}
+#tarrif
+{
+	margin-left:15.5%;
+	margin-bottom:3.5px;
+}
+#cat
+{
+	margin-left:11%;
+	margin-bottom:3.5px;
+}
+#one_phase
+{
+	margin-left:6.5%;
+	margin-bottom:3.5px;
+}
+#unit
+{
+	margin-left:2.5%;
+	margin-bottom:4.5px;
+}
+#cal
+{
+	margin-left:23%;
+	border-color:#deb887;
+	border-style:solid;
+	cursor:pointer;
+	background-color:white;
+	color:#deb887;
+	width:20%;
+	height:auto;
+	border-radius:7px;
+	font-size:large;
+	transition:.5s;
+}
+#cal:hover
+{
+	background-color:#deb887;
+	color:white;
+}
+.print
+{
+    margin-top: 2%;
+	background-color:white;
+	display:none;
+	width:40%;
+	text-align:center;
+}
+input[type=text]
+{
+	width:30%;
+}
+select
+{
+	width:25%;
+}
